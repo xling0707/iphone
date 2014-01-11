@@ -9,7 +9,4 @@
 #import "LINGBaseViewController.h"
 
 @interface LINGLoginViewController : LINGBaseViewController
-@property (strong, nonatomic) UITextField *usernameField;
-@property (strong, nonatomic) UITextField *passwordField;
-@property (strong, nonatomic) UIButton *loginButton;
 @end

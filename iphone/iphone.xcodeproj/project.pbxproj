@@ -171,10 +171,7 @@
 			children = (
 				8BB796A61880F04300BE0764 /* LINGBaseViewController.h */,
 				8BB796A71880F04300BE0764 /* LINGBaseViewController.m */,
-				8BB796AC188102CD00BE0764 /* LINGLoginViewController.h */,
-				8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */,
-				8BB796AF1881144300BE0764 /* LINGRegisterViewController.h */,
-				8BB796B01881144400BE0764 /* LINGRegisterViewController.m */,
+				8BEF90E818818D3900676D3D /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +188,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8BEF90E818818D3900676D3D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8BB796AC188102CD00BE0764 /* LINGLoginViewController.h */,
+				8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */,
+				8BB796AF1881144300BE0764 /* LINGRegisterViewController.h */,
+				8BB796B01881144400BE0764 /* LINGRegisterViewController.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

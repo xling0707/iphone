@@ -9,8 +9,4 @@
 #import "LINGBaseViewController.h"
 
 @interface LINGRegisterViewController : LINGBaseViewController
-@property (nonatomic, strong) UITextField *usernameField;
-@property (nonatomic, strong) UITextField *emailField;
-@property (nonatomic, strong) UITextField *passwordField;
-@property (nonatomic, strong) UIButton *registerButton;
 @end

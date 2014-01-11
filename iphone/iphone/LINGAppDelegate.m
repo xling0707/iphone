@@ -11,8 +11,6 @@
 #import "LINGLoginViewController.h"
 
 @interface LINGAppDelegate ()
-- (void) setupLog;
-- (void) domReady;
 @end
 
 @implementation LINGAppDelegate
@@ -22,9 +20,10 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
-- (void)setupLog
+
++ (LINGAppDelegate *)shareAppDelegate
 {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    return (LINGAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
 - (LINGLoginViewController *)loginViewController
@@ -35,23 +34,19 @@
     return _loginViewController;
 }
 
-- (void)domReady
-{
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
-    
-    
-    self.window.rootViewController = nav;
-}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    [self domReady];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
+    self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self setupLog];
+
     return YES;
 }
 
