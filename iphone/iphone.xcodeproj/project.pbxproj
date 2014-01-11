@@ -20,8 +20,11 @@
 		8BA449DB1880710800D775C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BB1880710800D775C1 /* Foundation.framework */; };
 		8BA449DC1880710800D775C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BF1880710800D775C1 /* UIKit.framework */; };
 		8BA449DD1880710800D775C1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449C11880710800D775C1 /* CoreData.framework */; };
-		8BB7969D1880E94D00BE0764 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB7969B1880E94D00BE0764 /* Localization.strings */; };
 		8BB796A81880F04300BE0764 /* LINGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796A71880F04300BE0764 /* LINGBaseViewController.m */; };
+		8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */; };
+		8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796B01881144400BE0764 /* LINGRegisterViewController.m */; };
+		8BEF90E318818B3000676D3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BEF90E118818B3000676D3D /* Localizable.strings */; };
+		F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B35E6AFB24F639C360590 /* libPods-iphone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D8B35E6AFB24F639C360590 /* libPods-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B9841A1188143C700EF6367 /* macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
 		8BA449B81880710800D775C1 /* iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA449BB1880710800D775C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8BA449BD1880710800D775C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,13 +55,19 @@
 		8BA449D21880710800D775C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BA449D81880710800D775C1 /* iphoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA449D91880710800D775C1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8BB7969C1880E94D00BE0764 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
-		8BB7969E1880E98A00BE0764 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization.strings"; sourceTree = "<group>"; };
-		8BB7969F1880E98A00BE0764 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		8BB796A01880E99000BE0764 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localization.strings"; sourceTree = "<group>"; };
-		8BB796A11880E99000BE0764 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		8BB796A61880F04300BE0764 /* LINGBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGBaseViewController.h; sourceTree = "<group>"; };
 		8BB796A71880F04300BE0764 /* LINGBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGBaseViewController.m; sourceTree = "<group>"; };
+		8BB796A91880F6CF00BE0764 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		8BB796AC188102CD00BE0764 /* LINGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGLoginViewController.h; sourceTree = "<group>"; };
+		8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGLoginViewController.m; sourceTree = "<group>"; };
+		8BB796AF1881144300BE0764 /* LINGRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGRegisterViewController.h; sourceTree = "<group>"; };
+		8BB796B01881144400BE0764 /* LINGRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGRegisterViewController.m; sourceTree = "<group>"; };
+		8BEF90E218818B3000676D3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8BEF90E418818B6D00676D3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8BEF90E518818B6D00676D3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8BEF90E618818B7200676D3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8BEF90E718818B7200676D3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iphone.xcconfig"; path = "Pods/Pods-iphone.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +79,7 @@
 				8BA449C21880710800D775C1 /* CoreData.framework in Frameworks */,
 				8BA449C01880710800D775C1 /* UIKit.framework in Frameworks */,
 				8BA449BC1880710800D775C1 /* Foundation.framework in Frameworks */,
+				F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,7 @@
 				8BA449C31880710800D775C1 /* iphone */,
 				8BA449BA1880710800D775C1 /* Frameworks */,
 				8BA449B91880710800D775C1 /* Products */,
+				E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +124,7 @@
 				8BA449BF1880710800D775C1 /* UIKit.framework */,
 				8BA449C11880710800D775C1 /* CoreData.framework */,
 				8BA449D91880710800D775C1 /* XCTest.framework */,
+				0D8B35E6AFB24F639C360590 /* libPods-iphone.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +138,8 @@
 				8BA449D21880710800D775C1 /* Images.xcassets */,
 				8BA449CF1880710800D775C1 /* iphone.xcdatamodeld */,
 				8BA449C41880710800D775C1 /* Supporting Files */,
+				8BB796A91880F6CF00BE0764 /* config.h */,
+				8B9841A1188143C700EF6367 /* macro.h */,
 			);
 			path = iphone;
 			sourceTree = "<group>";
@@ -131,7 +147,7 @@
 		8BA449C41880710800D775C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8BB7969B1880E94D00BE0764 /* Localization.strings */,
+				8BEF90E118818B3000676D3D /* Localizable.strings */,
 				8BA449C51880710800D775C1 /* iphone-Info.plist */,
 				8BA449C61880710800D775C1 /* InfoPlist.strings */,
 				8BA449C91880710800D775C1 /* main.m */,
@@ -155,6 +171,10 @@
 			children = (
 				8BB796A61880F04300BE0764 /* LINGBaseViewController.h */,
 				8BB796A71880F04300BE0764 /* LINGBaseViewController.m */,
+				8BB796AC188102CD00BE0764 /* LINGLoginViewController.h */,
+				8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */,
+				8BB796AF1881144300BE0764 /* LINGRegisterViewController.h */,
+				8BB796B01881144400BE0764 /* LINGRegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BA449EA1880710800D775C1 /* Build configuration list for PBXNativeTarget "iphone" */;
 			buildPhases = (
+				B2D80566D8A7407FBAE0FC8B /* Check Pods Manifest.lock */,
 				8BA449B41880710800D775C1 /* Sources */,
 				8BA449B51880710800D775C1 /* Frameworks */,
 				8BA449B61880710800D775C1 /* Resources */,
+				CE9E7C2DF0F141F9B4BB30BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA449C81880710800D775C1 /* InfoPlist.strings in Resources */,
-				8BB7969D1880E94D00BE0764 /* Localization.strings in Resources */,
+				8BEF90E318818B3000676D3D /* Localizable.strings in Resources */,
 				8BA449D31880710800D775C1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,13 +288,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B2D80566D8A7407FBAE0FC8B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9E7C2DF0F141F9B4BB30BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-iphone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8BA449B41880710800D775C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */,
 				8BA449CE1880710800D775C1 /* LINGAppDelegate.m in Sources */,
 				8BA449CA1880710800D775C1 /* main.m in Sources */,
+				8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */,
 				8BA449D11880710800D775C1 /* iphone.xcdatamodeld in Sources */,
 				8BB796A81880F04300BE0764 /* LINGBaseViewController.m in Sources */,
 			);
@@ -300,20 +357,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				8BA449C71880710800D775C1 /* en */,
-				8BB7969F1880E98A00BE0764 /* zh-Hans */,
-				8BB796A11880E99000BE0764 /* zh-Hant */,
+				8BEF90E518818B6D00676D3D /* zh-Hans */,
+				8BEF90E718818B7200676D3D /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8BB7969B1880E94D00BE0764 /* Localization.strings */ = {
+		8BEF90E118818B3000676D3D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BB7969C1880E94D00BE0764 /* en */,
-				8BB7969E1880E98A00BE0764 /* zh-Hans */,
-				8BB796A01880E99000BE0764 /* zh-Hant */,
+				8BEF90E218818B3000676D3D /* en */,
+				8BEF90E418818B6D00676D3D /* zh-Hans */,
+				8BEF90E618818B7200676D3D /* zh-Hant */,
 			);
-			name = Localization.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,6 +450,7 @@
 		};
 		8BA449EB1880710800D775C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -406,6 +464,7 @@
 		};
 		8BA449EC1880710800D775C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

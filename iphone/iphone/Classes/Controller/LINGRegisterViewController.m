@@ -1,18 +1,18 @@
 //
-//  LINGBaseViewController.m
+//  LINGRegisterViewController.m
 //  iphone
 //
 //  Created by 李晓肆 on 14-1-11.
 //  Copyright (c) 2014年 xianlvke. All rights reserved.
 //
 
-#import "LINGBaseViewController.h"
+#import "LINGRegisterViewController.h"
 
-@interface LINGBaseViewController ()
+@interface LINGRegisterViewController ()
 
 @end
 
-@implementation LINGBaseViewController
+@implementation LINGRegisterViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

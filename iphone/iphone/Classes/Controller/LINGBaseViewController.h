@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LINGBaseViewController : UIViewController
+@protocol LINGBaseViewController <NSObject>
+
+@end
+
+@interface LINGBaseViewController : UIViewController <LINGBaseViewController>
 
 @end
