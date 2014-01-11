@@ -20,8 +20,7 @@
 		8BA449DB1880710800D775C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BB1880710800D775C1 /* Foundation.framework */; };
 		8BA449DC1880710800D775C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BF1880710800D775C1 /* UIKit.framework */; };
 		8BA449DD1880710800D775C1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449C11880710800D775C1 /* CoreData.framework */; };
-		8BA449E51880710800D775C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BA449E31880710800D775C1 /* InfoPlist.strings */; };
-		8BA449E71880710800D775C1 /* iphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA449E61880710800D775C1 /* iphoneTests.m */; };
+		8BB7969D1880E94D00BE0764 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BB7969B1880E94D00BE0764 /* Localization.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +49,11 @@
 		8BA449D21880710800D775C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BA449D81880710800D775C1 /* iphoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA449D91880710800D775C1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8BA449E21880710800D775C1 /* iphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iphoneTests-Info.plist"; sourceTree = "<group>"; };
-		8BA449E41880710800D775C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8BA449E61880710800D775C1 /* iphoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iphoneTests.m; sourceTree = "<group>"; };
+		8BB7969C1880E94D00BE0764 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
+		8BB7969E1880E98A00BE0764 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localization.strings"; sourceTree = "<group>"; };
+		8BB7969F1880E98A00BE0764 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8BB796A01880E99000BE0764 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localization.strings"; sourceTree = "<group>"; };
+		8BB796A11880E99000BE0764 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				8BA449C31880710800D775C1 /* iphone */,
-				8BA449E01880710800D775C1 /* iphoneTests */,
 				8BA449BA1880710800D775C1 /* Frameworks */,
 				8BA449B91880710800D775C1 /* Products */,
 			);
@@ -127,28 +127,11 @@
 		8BA449C41880710800D775C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8BB7969B1880E94D00BE0764 /* Localization.strings */,
 				8BA449C51880710800D775C1 /* iphone-Info.plist */,
 				8BA449C61880710800D775C1 /* InfoPlist.strings */,
 				8BA449C91880710800D775C1 /* main.m */,
 				8BA449CB1880710800D775C1 /* iphone-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8BA449E01880710800D775C1 /* iphoneTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BA449E61880710800D775C1 /* iphoneTests.m */,
-				8BA449E11880710800D775C1 /* Supporting Files */,
-			);
-			path = iphoneTests;
-			sourceTree = "<group>";
-		};
-		8BA449E11880710800D775C1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BA449E21880710800D775C1 /* iphoneTests-Info.plist */,
-				8BA449E31880710800D775C1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,6 +195,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 8BA449AF1880710800D775C1;
 			productRefGroup = 8BA449B91880710800D775C1 /* Products */;
@@ -230,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA449C81880710800D775C1 /* InfoPlist.strings in Resources */,
+				8BB7969D1880E94D00BE0764 /* Localization.strings in Resources */,
 				8BA449D31880710800D775C1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +224,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA449E51880710800D775C1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +244,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA449E71880710800D775C1 /* iphoneTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,16 +262,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				8BA449C71880710800D775C1 /* en */,
+				8BB7969F1880E98A00BE0764 /* zh-Hans */,
+				8BB796A11880E99000BE0764 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8BA449E31880710800D775C1 /* InfoPlist.strings */ = {
+		8BB7969B1880E94D00BE0764 /* Localization.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BA449E41880710800D775C1 /* en */,
+				8BB7969C1880E94D00BE0764 /* en */,
+				8BB7969E1880E98A00BE0764 /* zh-Hans */,
+				8BB796A01880E99000BE0764 /* zh-Hant */,
 			);
-			name = InfoPlist.strings;
+			name = Localization.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -452,6 +440,7 @@
 				8BA449EC1880710800D775C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BA449ED1880710800D775C1 /* Build configuration list for PBXNativeTarget "iphoneTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +449,7 @@
 				8BA449EF1880710800D775C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
