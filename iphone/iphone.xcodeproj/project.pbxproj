@@ -29,6 +29,7 @@
 		8BEF90F318822CF600676D3D /* LINGNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90F218822CF600676D3D /* LINGNearbyViewController.m */; };
 		8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90F618822D1500676D3D /* LINGProfileViewController.m */; };
 		8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */; };
+		8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FE188231FF00676D3D /* LINGAPIClient.m */; };
 		F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B35E6AFB24F639C360590 /* libPods-iphone.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		8BEF90F618822D1500676D3D /* LINGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGProfileViewController.m; sourceTree = "<group>"; };
 		8BEF90F918822D2C00676D3D /* LINGMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGMoreViewController.h; sourceTree = "<group>"; };
 		8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGMoreViewController.m; sourceTree = "<group>"; };
+		8BEF90FD188231FF00676D3D /* LINGAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGAPIClient.h; sourceTree = "<group>"; };
+		8BEF90FE188231FF00676D3D /* LINGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGAPIClient.m; sourceTree = "<group>"; };
 		E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iphone.xcconfig"; path = "Pods/Pods-iphone.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +202,8 @@
 		8BB796A41880EF7D00BE0764 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8BEF90FD188231FF00676D3D /* LINGAPIClient.h */,
+				8BEF90FE188231FF00676D3D /* LINGAPIClient.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */,
+				8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */,
 				8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */,
 				8BA449CE1880710800D775C1 /* LINGAppDelegate.m in Sources */,
 				8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */,

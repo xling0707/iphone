@@ -8,8 +8,12 @@
 
 #import "LINGAppDelegate.h"
 #import <DDTTYLogger.h>
+#import <AFNetworking.h>
+#import <AFNetworkActivityIndicatorManager.h>
+
 #import "LINGLoginViewController.h"
 #import "LINGRegisterViewController.h"
+
 
 #import "LINGDiscoverViewController.h"
 #import "LINGMessageViewController.h"
@@ -79,6 +83,11 @@
 {
 
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.rootViewController = self.mainTabBarController;
