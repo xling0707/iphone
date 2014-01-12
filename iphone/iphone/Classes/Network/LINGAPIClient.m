@@ -8,7 +8,11 @@
 
 #import "LINGAPIClient.h"
 
-static NSString * const APIBaseURLString = @"https://localhost/api";
+static NSString * const APIBaseURLString = @"http://localhost/api";
+
+static NSString * const kLogin = @"login";
+
+
 
 @implementation LINGAPIClient
 + (instancetype)sharedClient
@@ -17,10 +21,19 @@ static NSString * const APIBaseURLString = @"https://localhost/api";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[LINGAPIClient alloc] initWithBaseURL:[NSURL URLWithString:APIBaseURLString]];
-        // 不使用加密
-		[_sharedClient setSecurityPolicy:[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone]];
     });
     
     return _sharedClient;
+}
+
+
+- (AFHTTPRequestOperation *)loginWithName:(NSString *)name withPassword:(NSString *)password withBlock:(apiCallback)block
+{
+    return [self POST:kLogin parameters:@{@"name" : name ,@"password" : password} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        LINGRespondeModel *model = [[LINGRespondeModel alloc] initWithDictionary:responseObject];
+        block(model,nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        block(nil,error);
+    }];
 }
 @end

@@ -31,8 +31,8 @@
 		8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */; };
 		8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FE188231FF00676D3D /* LINGAPIClient.m */; };
 		8BEF91021882335700676D3D /* LINGDiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF91011882335700676D3D /* LINGDiscoverTableViewCell.m */; };
-		8BEF9105188236D200676D3D /* LINGBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF9104188236D200676D3D /* LINGBaseModel.m */; };
-		8BEF9108188236E500676D3D /* LINGFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF9107188236E500676D3D /* LINGFeed.m */; };
+		8BEF91101882751000676D3D /* LINGLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF910F1882751000676D3D /* LINGLoginManager.m */; };
+		8BEF911718827DB300676D3D /* LINGRespondeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF911618827DB300676D3D /* LINGRespondeModel.m */; };
 		F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B35E6AFB24F639C360590 /* libPods-iphone.a */; };
 /* End PBXBuildFile section */
 
@@ -90,10 +90,10 @@
 		8BEF90FE188231FF00676D3D /* LINGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGAPIClient.m; sourceTree = "<group>"; };
 		8BEF91001882335700676D3D /* LINGDiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGDiscoverTableViewCell.h; sourceTree = "<group>"; };
 		8BEF91011882335700676D3D /* LINGDiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGDiscoverTableViewCell.m; sourceTree = "<group>"; };
-		8BEF9103188236D200676D3D /* LINGBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGBaseModel.h; sourceTree = "<group>"; };
-		8BEF9104188236D200676D3D /* LINGBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGBaseModel.m; sourceTree = "<group>"; };
-		8BEF9106188236E500676D3D /* LINGFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGFeed.h; sourceTree = "<group>"; };
-		8BEF9107188236E500676D3D /* LINGFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGFeed.m; sourceTree = "<group>"; };
+		8BEF910E1882751000676D3D /* LINGLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGLoginManager.h; sourceTree = "<group>"; };
+		8BEF910F1882751000676D3D /* LINGLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGLoginManager.m; sourceTree = "<group>"; };
+		8BEF911518827DB300676D3D /* LINGRespondeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGRespondeModel.h; sourceTree = "<group>"; };
+		8BEF911618827DB300676D3D /* LINGRespondeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGRespondeModel.m; sourceTree = "<group>"; };
 		E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iphone.xcconfig"; path = "Pods/Pods-iphone.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +186,8 @@
 		8BB796A21880EF7D00BE0764 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8BEF911418827D9700676D3D /* Model */,
+				8BEF910A188273B500676D3D /* Common */,
 				8BB796A31880EF7D00BE0764 /* Controller */,
 				8BB796A41880EF7D00BE0764 /* Network */,
 				8BB796A51880EF7D00BE0764 /* View */,
@@ -213,9 +215,6 @@
 			children = (
 				8BEF90FD188231FF00676D3D /* LINGAPIClient.h */,
 				8BEF90FE188231FF00676D3D /* LINGAPIClient.m */,
-				8BEF9103188236D200676D3D /* LINGBaseModel.h */,
-				8BEF9104188236D200676D3D /* LINGBaseModel.m */,
-				8BEF9109188236F700676D3D /* Feed */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -285,13 +284,22 @@
 			name = More;
 			sourceTree = "<group>";
 		};
-		8BEF9109188236F700676D3D /* Feed */ = {
+		8BEF910A188273B500676D3D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8BEF9106188236E500676D3D /* LINGFeed.h */,
-				8BEF9107188236E500676D3D /* LINGFeed.m */,
+				8BEF910E1882751000676D3D /* LINGLoginManager.h */,
+				8BEF910F1882751000676D3D /* LINGLoginManager.m */,
 			);
-			name = Feed;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8BEF911418827D9700676D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF911518827DB300676D3D /* LINGRespondeModel.h */,
+				8BEF911618827DB300676D3D /* LINGRespondeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,13 +439,13 @@
 				8BEF91021882335700676D3D /* LINGDiscoverTableViewCell.m in Sources */,
 				8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */,
 				8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */,
-				8BEF9105188236D200676D3D /* LINGBaseModel.m in Sources */,
 				8BA449CE1880710800D775C1 /* LINGAppDelegate.m in Sources */,
+				8BEF911718827DB300676D3D /* LINGRespondeModel.m in Sources */,
 				8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */,
 				8BA449CA1880710800D775C1 /* main.m in Sources */,
 				8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */,
-				8BEF9108188236E500676D3D /* LINGFeed.m in Sources */,
 				8BEF90EF18822CCA00676D3D /* LINGMessageViewController.m in Sources */,
+				8BEF91101882751000676D3D /* LINGLoginManager.m in Sources */,
 				8BA449D11880710800D775C1 /* iphone.xcdatamodeld in Sources */,
 				8BB796A81880F04300BE0764 /* LINGBaseViewController.m in Sources */,
 				8BEF90EB18822C7F00676D3D /* LINGDiscoverViewController.m in Sources */,

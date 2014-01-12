@@ -8,6 +8,7 @@
 
 #import "LINGLoginViewController.h"
 #import "LINGRegisterViewController.h"
+#import "LINGAPIClient.h"
 
 @interface LINGLoginViewController ()
 
@@ -37,7 +38,7 @@
     if (self) {
         // Custom initialization
         NSString *title = NSLocalizedString(@"login-nav-title", @"登录-标题");
-        self.title = title;
+        self.navigationItem.title = title;
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"login-nav-register", @"登录-注册") style:UIBarButtonItemStylePlain target:self action:@selector(switchRegister:)];
     }
     return self;
@@ -54,6 +55,32 @@
 - (void)login:(id)sender
 {
     DDLogVerbose(@"%@",@"登录");
+    if (self.usernameField.text.length && self.passwordField.text.length) {
+        
+        [[LINGAPIClient sharedClient] loginWithName:self.usernameField.text withPassword:self.passwordField.text withBlock:^(LINGRespondeModel *response, NSError *error) {
+            if(response.ok)
+            {
+            }
+            else{
+                NSString *alertTitle = NSLocalizedString(@"login-alert-title", @"警告");
+                NSString *alertCancel = NSLocalizedString(@"login-alert-cancel", @"取消");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:response.msg delegate:nil cancelButtonTitle:alertCancel otherButtonTitles: nil];
+                [alert show];
+            }
+            DDLogVerbose(@"callback%@",response);
+            DDLogVerbose(@"err %d",response.err);
+            DDLogVerbose(@"msg %@",response.msg);
+        }];
+        
+    }
+    else{
+        NSString *alertTitle = NSLocalizedString(@"login-alert-title", @"警告");
+        NSString *alertMsg = NSLocalizedString(@"login-alert-msg", @"没有帐号，密码");
+        NSString *alertCancel = NSLocalizedString(@"login-alert-cancel", @"取消");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertTitle message:alertMsg delegate:nil cancelButtonTitle:alertCancel otherButtonTitles: nil];
+        [alert show];
+    }
 }
 
 - (void)viewDidLoad

@@ -11,10 +11,11 @@
 #import <AFNetworking.h>
 #import <AFNetworkActivityIndicatorManager.h>
 
+#import "LINGLoginManager.h"
+
+// Controllers
 #import "LINGLoginViewController.h"
 #import "LINGRegisterViewController.h"
-
-
 #import "LINGDiscoverViewController.h"
 #import "LINGMessageViewController.h"
 #import "LINGNearbyViewController.h"
@@ -93,8 +94,18 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+	// 判断是否登录
+    if ([[LINGLoginManager sharedManager] isLogin]) {
+        DDLogVerbose(@"password is %@",[LINGLoginManager sharedManager].password);
+        self.window.rootViewController = self.mainTabBarController;
+    }
+    else{
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
+        self.window.rootViewController = nav;
+    }
+    
     // Override point for customization after application launch.
-    self.window.rootViewController = self.mainTabBarController;
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor whiteColor];
 
