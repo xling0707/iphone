@@ -66,7 +66,7 @@
     self.passwordField = [[UITextField alloc] init];
     self.loginButton = [[UIButton alloc] init];
     
-    usernameLabel.text = NSLocalizedString(@"login-label-username", @"用户名");
+    usernameLabel.text = NSLocalizedString(@"login-label-username", @"帐号");
     passwordLabel.text = NSLocalizedString(@"login-label-password", @"密码");
     
     
@@ -74,28 +74,32 @@
     self.passwordField.secureTextEntry = YES;
     self.passwordField.placeholder = NSLocalizedString(@"login-filed-password-tip", @"密码占位提示");
     
+    [self.loginButton setTitle:NSLocalizedString(@"login-button-login", @"登录") forState:UIControlStateNormal];
+    [self.loginButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    
     
     // 注册事件
     [self.loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:usernameLabel];
-    [self.view addSubview:passwordLabel];
-    [self.view addSubview:self.usernameField];
-    [self.view addSubview:self.passwordField];
     
     NSDictionary *viewsBindings = NSDictionaryOfVariableBindings(usernameLabel,passwordLabel,_usernameField,_passwordField,_loginButton);
     
     for (NSString *key in viewsBindings) {
         UIView *v =  (UIView *)viewsBindings[key];
  		[v setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self.view addSubview:v];
     }
+    
+    
     
     NSDictionary *metrics = @{
           @"paddingTop" 	: @80,
-          @"labelWidth" 	: @80,
+          @"labelWidth" 	: @55,
           @"labelHeight" 	: @37,
           @"fieldWidth" 	: @120,
-          @"fieldHeight" 	: @37
+          @"fieldHeight" 	: @37,
+          @"buttonWidth"	: @100,
+          @"buttonHeight"	: @50
     };
     
     
@@ -109,14 +113,19 @@
         @"H:[_usernameField(>=fieldWidth)]",
         @"V:[_usernameField(==fieldHeight)]",
         
+        
+        @"H:|-[_loginButton(>=buttonWidth)]-|",
+        @"V:[_loginButton(==buttonHeight)]",
+        
         @"H:[_passwordField(==_usernameField)]",
         @"V:[_passwordField(==_usernameField)]",
         
-        @"H:|-[usernameLabel]-(10)-[_usernameField]-|",
-        @"H:|-[passwordLabel]-(10)-[_passwordField]-|",
         
-        @"V:|-(paddingTop)-[usernameLabel]-(20)-[passwordLabel]",
-        @"V:|-(paddingTop)-[_usernameField]-(20)-[_passwordField]"
+        @"H:|-[usernameLabel]-(2)-[_usernameField]-|",
+        @"H:|-[passwordLabel]-(2)-[_passwordField]-|",
+        
+        @"V:|-(paddingTop)-[usernameLabel]-(10)-[passwordLabel]-(10)-[_loginButton]",
+        @"V:|-(paddingTop)-[_usernameField]-(10)-[_passwordField]-(10)-[_loginButton]"
 	];
     
     NSMutableArray *constraintsArray = [NSMutableArray array];
