@@ -7,6 +7,7 @@
 //
 
 #import "LINGDiscoverViewController.h"
+#import "LINGDiscoverTableViewCell.h"
 
 @interface LINGDiscoverViewController ()
 
@@ -19,6 +20,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.navigationItem.title = NSLocalizedString(@"discover-nav-title", @"巴黎");
     }
     return self;
 }

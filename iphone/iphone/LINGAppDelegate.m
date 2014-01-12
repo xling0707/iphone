@@ -50,11 +50,16 @@
     if (nil == _mainTabBarController) {
         _mainTabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
         
-        LINGDiscoverViewController *discover = [[LINGDiscoverViewController alloc] initWithNibName:nil bundle:nil];
-        LINGMessageViewController *message = [[LINGMessageViewController alloc] initWithNibName:nil bundle:nil];
-        LINGNearbyViewController *nearby = [[LINGNearbyViewController alloc] initWithNibName:nil bundle:nil];
-        LINGProfileViewController *profile = [[LINGProfileViewController alloc] initWithNibName:nil bundle:nil];
-        LINGMoreViewController *more = [[LINGMoreViewController alloc] initWithNibName:nil bundle:nil];
+        //发现
+        LINGDiscoverViewController *discover = [[LINGDiscoverViewController alloc] initWithStyle:UITableViewStylePlain];
+        //私信
+        LINGMessageViewController *message = [[LINGMessageViewController alloc] initWithStyle:UITableViewStylePlain];
+        //附近
+        LINGNearbyViewController *nearby = [[LINGNearbyViewController alloc] initWithStyle:UITableViewStylePlain];
+        //我
+        LINGProfileViewController *profile = [[LINGProfileViewController alloc] initWithStyle:UITableViewStylePlain];
+        //更多
+        LINGMoreViewController *more = [[LINGMoreViewController alloc] initWithStyle:UITableViewStylePlain];
         
         NSArray *rootControllers = @[discover,message,nearby,profile,more];
         
@@ -73,7 +78,6 @@
             nav.tabBarItem.title = tabBarTitle;
             [_mainTabBarController addChildViewController:nav];
         }
-        
     }
     return _mainTabBarController;
 }
