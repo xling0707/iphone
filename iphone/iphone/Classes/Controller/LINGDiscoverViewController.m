@@ -10,19 +10,35 @@
 #import "LINGDiscoverTableViewCell.h"
 
 @interface LINGDiscoverViewController ()
-
+- (void)switchCity : (id)sender;
 @end
 
 @implementation LINGDiscoverViewController
+
+- (void)setCityID:(NSInteger)cityID
+{
+    _cityID = cityID;
+    
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.navigationItem.title = NSLocalizedString(@"discover-nav-title", @"巴黎");
+        UIButton *titleButton = [[UIButton alloc] init];
+        NSString *title = NSLocalizedString(@"discover-nav-title", @"巴黎");
+        [titleButton setTitle:title forState:UIControlStateNormal];
+        [titleButton addTarget:self action:@selector(switchCity:) forControlEvents:UIControlEventTouchUpInside];
+        [titleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        self.navigationItem.titleView = titleButton;
     }
     return self;
+}
+
+- (void)switchCity:(id)sender
+{
+    DDLogVerbose(@"%@",@"切换城市");
 }
 
 - (void)viewDidLoad

@@ -9,6 +9,8 @@
 #import "LINGLoginViewController.h"
 #import "LINGRegisterViewController.h"
 #import "LINGAPIClient.h"
+#import "LINGLoginManager.h"
+#import "LINGAppDelegate.h"
 
 @interface LINGLoginViewController ()
 
@@ -60,6 +62,12 @@
         [[LINGAPIClient sharedClient] loginWithName:self.usernameField.text withPassword:self.passwordField.text withBlock:^(LINGRespondeModel *response, NSError *error) {
             if(response.ok)
             {
+                NSString *token = response.data[@"token"];
+                [LINGLoginManager sharedManager].password = token;
+                [[LINGLoginManager sharedManager] save:nil];
+                [[LINGAPIClient sharedClient].requestSerializer setAuthorizationHeaderFieldWithToken:token];
+                LINGAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+                self.view.window.rootViewController = appDelegate.mainTabBarController;
             }
             else{
                 NSString *alertTitle = NSLocalizedString(@"login-alert-title", @"警告");

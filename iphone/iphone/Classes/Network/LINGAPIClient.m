@@ -7,6 +7,7 @@
 //
 
 #import "LINGAPIClient.h"
+#import "LINGLoginManager.h"
 
 static NSString * const APIBaseURLString = @"http://localhost/api";
 
@@ -21,6 +22,10 @@ static NSString * const kLogin = @"login";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[LINGAPIClient alloc] initWithBaseURL:[NSURL URLWithString:APIBaseURLString]];
+        // set token;
+        if ([[LINGLoginManager sharedManager] isLogin]) {
+            [_sharedClient.requestSerializer setAuthorizationHeaderFieldWithToken:[LINGLoginManager sharedManager].password];
+        }
     });
     
     return _sharedClient;

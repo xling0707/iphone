@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LINGDiscoverViewController : UITableViewController
-
+@property (nonatomic) NSInteger cityID;
 @end
