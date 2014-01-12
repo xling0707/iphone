@@ -24,6 +24,11 @@
 		8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */; };
 		8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796B01881144400BE0764 /* LINGRegisterViewController.m */; };
 		8BEF90E318818B3000676D3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BEF90E118818B3000676D3D /* Localizable.strings */; };
+		8BEF90EB18822C7F00676D3D /* LINGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90EA18822C7F00676D3D /* LINGDiscoverViewController.m */; };
+		8BEF90EF18822CCA00676D3D /* LINGMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90EE18822CCA00676D3D /* LINGMessageViewController.m */; };
+		8BEF90F318822CF600676D3D /* LINGNearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90F218822CF600676D3D /* LINGNearbyViewController.m */; };
+		8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90F618822D1500676D3D /* LINGProfileViewController.m */; };
+		8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */; };
 		F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B35E6AFB24F639C360590 /* libPods-iphone.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,16 @@
 		8BEF90E518818B6D00676D3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		8BEF90E618818B7200676D3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8BEF90E718818B7200676D3D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8BEF90E918822C7F00676D3D /* LINGDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGDiscoverViewController.h; sourceTree = "<group>"; };
+		8BEF90EA18822C7F00676D3D /* LINGDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGDiscoverViewController.m; sourceTree = "<group>"; };
+		8BEF90ED18822CCA00676D3D /* LINGMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGMessageViewController.h; sourceTree = "<group>"; };
+		8BEF90EE18822CCA00676D3D /* LINGMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGMessageViewController.m; sourceTree = "<group>"; };
+		8BEF90F118822CF600676D3D /* LINGNearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGNearbyViewController.h; sourceTree = "<group>"; };
+		8BEF90F218822CF600676D3D /* LINGNearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGNearbyViewController.m; sourceTree = "<group>"; };
+		8BEF90F518822D1500676D3D /* LINGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGProfileViewController.h; sourceTree = "<group>"; };
+		8BEF90F618822D1500676D3D /* LINGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGProfileViewController.m; sourceTree = "<group>"; };
+		8BEF90F918822D2C00676D3D /* LINGMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGMoreViewController.h; sourceTree = "<group>"; };
+		8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGMoreViewController.m; sourceTree = "<group>"; };
 		E8AC5487437E43BDA7E8B574 /* Pods-iphone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iphone.xcconfig"; path = "Pods/Pods-iphone.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +187,11 @@
 				8BB796A61880F04300BE0764 /* LINGBaseViewController.h */,
 				8BB796A71880F04300BE0764 /* LINGBaseViewController.m */,
 				8BEF90E818818D3900676D3D /* Login */,
+				8BEF90EC18822C8500676D3D /* Discover */,
+				8BEF90F018822CCF00676D3D /* Message */,
+				8BEF90F418822CFF00676D3D /* Nearby */,
+				8BEF90F818822D1900676D3D /* Profile */,
+				8BEF90FC18822D2F00676D3D /* More */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +219,51 @@
 				8BB796B01881144400BE0764 /* LINGRegisterViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		8BEF90EC18822C8500676D3D /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF90E918822C7F00676D3D /* LINGDiscoverViewController.h */,
+				8BEF90EA18822C7F00676D3D /* LINGDiscoverViewController.m */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		8BEF90F018822CCF00676D3D /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF90ED18822CCA00676D3D /* LINGMessageViewController.h */,
+				8BEF90EE18822CCA00676D3D /* LINGMessageViewController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		8BEF90F418822CFF00676D3D /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF90F118822CF600676D3D /* LINGNearbyViewController.h */,
+				8BEF90F218822CF600676D3D /* LINGNearbyViewController.m */,
+			);
+			name = Nearby;
+			sourceTree = "<group>";
+		};
+		8BEF90F818822D1900676D3D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF90F518822D1500676D3D /* LINGProfileViewController.h */,
+				8BEF90F618822D1500676D3D /* LINGProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		8BEF90FC18822D2F00676D3D /* More */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF90F918822D2C00676D3D /* LINGMoreViewController.h */,
+				8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */,
+			);
+			name = More;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,12 +399,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */,
 				8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */,
 				8BA449CE1880710800D775C1 /* LINGAppDelegate.m in Sources */,
+				8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */,
 				8BA449CA1880710800D775C1 /* main.m in Sources */,
 				8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */,
+				8BEF90EF18822CCA00676D3D /* LINGMessageViewController.m in Sources */,
 				8BA449D11880710800D775C1 /* iphone.xcdatamodeld in Sources */,
 				8BB796A81880F04300BE0764 /* LINGBaseViewController.m in Sources */,
+				8BEF90EB18822C7F00676D3D /* LINGDiscoverViewController.m in Sources */,
+				8BEF90F318822CF600676D3D /* LINGNearbyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

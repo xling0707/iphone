@@ -9,6 +9,13 @@
 #import "LINGAppDelegate.h"
 #import <DDTTYLogger.h>
 #import "LINGLoginViewController.h"
+#import "LINGRegisterViewController.h"
+
+#import "LINGDiscoverViewController.h"
+#import "LINGMessageViewController.h"
+#import "LINGNearbyViewController.h"
+#import "LINGProfileViewController.h"
+#import "LINGMoreViewController.h"
 
 @interface LINGAppDelegate ()
 @end
@@ -34,6 +41,38 @@
     return _loginViewController;
 }
 
+- (UITabBarController *)mainTabBarController
+{
+    if (nil == _mainTabBarController) {
+        _mainTabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
+        
+        LINGDiscoverViewController *discover = [[LINGDiscoverViewController alloc] initWithNibName:nil bundle:nil];
+        LINGMessageViewController *message = [[LINGMessageViewController alloc] initWithNibName:nil bundle:nil];
+        LINGNearbyViewController *nearby = [[LINGNearbyViewController alloc] initWithNibName:nil bundle:nil];
+        LINGProfileViewController *profile = [[LINGProfileViewController alloc] initWithNibName:nil bundle:nil];
+        LINGMoreViewController *more = [[LINGMoreViewController alloc] initWithNibName:nil bundle:nil];
+        
+        NSArray *rootControllers = @[discover,message,nearby,profile,more];
+        
+        NSArray *tabBarTitles = @[
+             NSLocalizedString(@"main-tabbar-discover", @"发现"),
+             NSLocalizedString(@"main-tabbar-message", @"私信"),
+             NSLocalizedString(@"main-tabbar-nearby", @"附近小鲜"),
+             NSLocalizedString(@"main-tabbar-profile", @"我"),
+             NSLocalizedString(@"main-tabbar-more", @"更多")
+        ];
+        
+        for (int i=0; i< [rootControllers count]; i++) {
+            UIViewController *rootController = rootControllers[i];
+            NSString *tabBarTitle = tabBarTitles[i];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootController];
+            nav.tabBarItem.title = tabBarTitle;
+            [_mainTabBarController addChildViewController:nav];
+        }
+        
+    }
+    return _mainTabBarController;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -42,8 +81,7 @@
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = self.mainTabBarController;
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor whiteColor];
 
