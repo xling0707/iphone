@@ -68,6 +68,7 @@
                 [[LINGAPIClient sharedClient].requestSerializer setAuthorizationHeaderFieldWithToken:token];
                 LINGAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
                 self.view.window.rootViewController = appDelegate.mainTabBarController;
+                appDelegate.mainTabBarController.selectedIndex = 0;
             }
             else{
                 NSString *alertTitle = NSLocalizedString(@"login-alert-title", @"警告");

@@ -7,9 +7,14 @@
 //
 
 #import "LINGMoreViewController.h"
+#import "LINGLoginManager.h"
+#import "LINGAPIClient.h"
+#import "LINGAppDelegate.h"
+
+static NSString * const CellReuseIdentifierForLoginOut = @"login-out-identifier";
 
 @interface LINGMoreViewController ()
-
+- (void) loginOut :(id)sender;
 @end
 
 @implementation LINGMoreViewController
@@ -19,19 +24,32 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-    }
+	}
     return self;
+}
+
+- (void) loginOut:(id)sender
+{
+    [LINGLoginManager sharedManager].password = nil;
+    [[LINGLoginManager sharedManager] save:nil];
+    [[LINGAPIClient sharedClient].requestSerializer setAuthorizationHeaderFieldWithToken:nil];
+    LINGAppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:delegate.loginViewController];
+    self.view.window.rootViewController = nav;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+	
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.title = NSLocalizedString(@"more-nav-title", @"更多-标题");
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellReuseIdentifierForLoginOut];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,26 +62,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    UITableViewCell *cell  = nil;
     // Configure the cell...
+    if (0 == indexPath.row) {
+        cell = [tableView dequeueReusableCellWithIdentifier:CellReuseIdentifierForLoginOut forIndexPath:indexPath];
+        cell.textLabel.text = NSLocalizedString(@"more-login-out", @"退出");
+    }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (0 == indexPath.row) {
+        [self loginOut:nil];
+    }
 }
 
 /*
