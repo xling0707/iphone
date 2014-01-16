@@ -14,13 +14,6 @@
 #import "LINGLoginManager.h"
 
 // Controllers
-#import "LINGLoginViewController.h"
-#import "LINGRegisterViewController.h"
-#import "LINGDiscoverViewController.h"
-#import "LINGMessageViewController.h"
-#import "LINGNearbyViewController.h"
-#import "LINGProfileViewController.h"
-#import "LINGMoreViewController.h"
 
 @interface LINGAppDelegate ()
 @end
@@ -38,50 +31,6 @@
     return (LINGAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
-- (LINGLoginViewController *)loginViewController
-{
-    if(nil == _loginViewController){
-        _loginViewController = [[LINGLoginViewController alloc] initWithNibName:nil bundle:nil];
-    }
-    return _loginViewController;
-}
-
-- (UITabBarController *)mainTabBarController
-{
-    if (nil == _mainTabBarController) {
-        _mainTabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-        
-        //发现
-        LINGDiscoverViewController *discover = [[LINGDiscoverViewController alloc] initWithStyle:UITableViewStylePlain];
-        //私信
-        LINGMessageViewController *message = [[LINGMessageViewController alloc] initWithStyle:UITableViewStylePlain];
-        //附近
-        LINGNearbyViewController *nearby = [[LINGNearbyViewController alloc] initWithStyle:UITableViewStylePlain];
-        //我
-        LINGProfileViewController *profile = [[LINGProfileViewController alloc] initWithStyle:UITableViewStylePlain];
-        //更多
-        LINGMoreViewController *more = [[LINGMoreViewController alloc] initWithStyle:UITableViewStylePlain];
-        
-        NSArray *rootControllers = @[discover,message,nearby,profile,more];
-        
-        NSArray *tabBarTitles = @[
-             NSLocalizedString(@"main-tabbar-discover", @"发现"),
-             NSLocalizedString(@"main-tabbar-message", @"私信"),
-             NSLocalizedString(@"main-tabbar-nearby", @"附近小鲜"),
-             NSLocalizedString(@"main-tabbar-profile", @"我"),
-             NSLocalizedString(@"main-tabbar-more", @"更多")
-        ];
-        
-        for (int i=0; i< [rootControllers count]; i++) {
-            UIViewController *rootController = rootControllers[i];
-            NSString *tabBarTitle = tabBarTitles[i];
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootController];
-            nav.tabBarItem.title = tabBarTitle;
-            [_mainTabBarController addChildViewController:nav];
-        }
-    }
-    return _mainTabBarController;
-}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -92,17 +41,10 @@
     [NSURLCache setSharedURLCache:URLCache];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
 	// 判断是否登录
     if ([[LINGLoginManager sharedManager] isLogin]) {
         DDLogVerbose(@"password is %@",[LINGLoginManager sharedManager].password);
-        self.window.rootViewController = self.mainTabBarController;
-    }
-    else{
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.loginViewController];
-        self.window.rootViewController = nav;
+        self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"homeController"];
     }
     
     // Override point for customization after application launch.

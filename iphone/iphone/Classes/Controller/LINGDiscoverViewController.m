@@ -7,7 +7,6 @@
 //
 
 #import "LINGDiscoverViewController.h"
-#import "LINGDiscoverTableViewCell.h"
 
 @interface LINGDiscoverViewController ()
 - (void)switchCity : (id)sender;
@@ -15,11 +14,6 @@
 
 @implementation LINGDiscoverViewController
 
-- (void)setCityID:(NSInteger)cityID
-{
-    _cityID = cityID;
-    
-}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,12 +38,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    UIButton *titleButton = [[UIButton alloc] init];
-    NSString *title = NSLocalizedString(@"discover-nav-title", @"巴黎");
-    [titleButton setTitle:title forState:UIControlStateNormal];
-    [titleButton addTarget:self action:@selector(switchCity:) forControlEvents:UIControlEventTouchUpInside];
-    [titleButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    self.navigationItem.titleView = titleButton;
 }
 
 - (void)didReceiveMemoryWarning

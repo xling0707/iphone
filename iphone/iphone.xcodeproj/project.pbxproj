@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B6AB7BC1886E65300F51C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6AB7BB1886E65300F51C62 /* Main.storyboard */; };
+		8B7F26FE18884A28009FA88C /* LINGDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F26FD18884A28009FA88C /* LINGDiscoverCell.m */; };
 		8BA449BC1880710800D775C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BB1880710800D775C1 /* Foundation.framework */; };
 		8BA449BE1880710800D775C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BD1880710800D775C1 /* CoreGraphics.framework */; };
 		8BA449C01880710800D775C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA449BF1880710800D775C1 /* UIKit.framework */; };
@@ -30,7 +32,6 @@
 		8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90F618822D1500676D3D /* LINGProfileViewController.m */; };
 		8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */; };
 		8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90FE188231FF00676D3D /* LINGAPIClient.m */; };
-		8BEF91021882335700676D3D /* LINGDiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF91011882335700676D3D /* LINGDiscoverTableViewCell.m */; };
 		8BEF91101882751000676D3D /* LINGLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF910F1882751000676D3D /* LINGLoginManager.m */; };
 		8BEF911718827DB300676D3D /* LINGRespondeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF911618827DB300676D3D /* LINGRespondeModel.m */; };
 		F0327D192F8043C68BF70ADD /* libPods-iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8B35E6AFB24F639C360590 /* libPods-iphone.a */; };
@@ -48,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		0D8B35E6AFB24F639C360590 /* libPods-iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6AB7BB1886E65300F51C62 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8B7F26FC18884A28009FA88C /* LINGDiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGDiscoverCell.h; sourceTree = "<group>"; };
+		8B7F26FD18884A28009FA88C /* LINGDiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGDiscoverCell.m; sourceTree = "<group>"; };
 		8B9841A1188143C700EF6367 /* macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
 		8BA449B81880710800D775C1 /* iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA449BB1880710800D775C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,8 +92,6 @@
 		8BEF90FA18822D2C00676D3D /* LINGMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGMoreViewController.m; sourceTree = "<group>"; };
 		8BEF90FD188231FF00676D3D /* LINGAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGAPIClient.h; sourceTree = "<group>"; };
 		8BEF90FE188231FF00676D3D /* LINGAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGAPIClient.m; sourceTree = "<group>"; };
-		8BEF91001882335700676D3D /* LINGDiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGDiscoverTableViewCell.h; sourceTree = "<group>"; };
-		8BEF91011882335700676D3D /* LINGDiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGDiscoverTableViewCell.m; sourceTree = "<group>"; };
 		8BEF910E1882751000676D3D /* LINGLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGLoginManager.h; sourceTree = "<group>"; };
 		8BEF910F1882751000676D3D /* LINGLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGLoginManager.m; sourceTree = "<group>"; };
 		8BEF911518827DB300676D3D /* LINGRespondeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGRespondeModel.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				8BA449C41880710800D775C1 /* Supporting Files */,
 				8BB796A91880F6CF00BE0764 /* config.h */,
 				8B9841A1188143C700EF6367 /* macro.h */,
+				8B6AB7BB1886E65300F51C62 /* Main.storyboard */,
 			);
 			path = iphone;
 			sourceTree = "<group>";
@@ -222,8 +225,8 @@
 		8BB796A51880EF7D00BE0764 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8BEF91001882335700676D3D /* LINGDiscoverTableViewCell.h */,
-				8BEF91011882335700676D3D /* LINGDiscoverTableViewCell.m */,
+				8B7F26FC18884A28009FA88C /* LINGDiscoverCell.h */,
+				8B7F26FD18884A28009FA88C /* LINGDiscoverCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				8BA449C81880710800D775C1 /* InfoPlist.strings in Resources */,
 				8BEF90E318818B3000676D3D /* Localizable.strings in Resources */,
 				8BA449D31880710800D775C1 /* Images.xcassets in Resources */,
+				8B6AB7BC1886E65300F51C62 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,11 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BEF90F718822D1500676D3D /* LINGProfileViewController.m in Sources */,
-				8BEF91021882335700676D3D /* LINGDiscoverTableViewCell.m in Sources */,
 				8BEF90FF188231FF00676D3D /* LINGAPIClient.m in Sources */,
 				8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */,
 				8BA449CE1880710800D775C1 /* LINGAppDelegate.m in Sources */,
 				8BEF911718827DB300676D3D /* LINGRespondeModel.m in Sources */,
+				8B7F26FE18884A28009FA88C /* LINGDiscoverCell.m in Sources */,
 				8BEF90FB18822D2C00676D3D /* LINGMoreViewController.m in Sources */,
 				8BA449CA1880710800D775C1 /* main.m in Sources */,
 				8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */,

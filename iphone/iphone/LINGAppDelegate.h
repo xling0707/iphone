@@ -13,9 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) LINGLoginViewController *loginViewController;
-@property (strong, nonatomic) UITabBarController *mainTabBarController;
-
 
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
