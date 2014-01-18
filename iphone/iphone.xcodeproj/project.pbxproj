@@ -25,6 +25,11 @@
 		8BB796A81880F04300BE0764 /* LINGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796A71880F04300BE0764 /* LINGBaseViewController.m */; };
 		8BB796AE188102CD00BE0764 /* LINGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */; };
 		8BB796B11881144400BE0764 /* LINGRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB796B01881144400BE0764 /* LINGRegisterViewController.m */; };
+		8BEB739F188AD4B20084B890 /* tabbar-profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB739A188AD4B20084B890 /* tabbar-profile@2x.png */; };
+		8BEB73A0188AD4B20084B890 /* tabbar-nearby@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB739B188AD4B20084B890 /* tabbar-nearby@2x.png */; };
+		8BEB73A1188AD4B20084B890 /* tabbar-more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB739C188AD4B20084B890 /* tabbar-more@2x.png */; };
+		8BEB73A2188AD4B20084B890 /* tabbar-message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB739D188AD4B20084B890 /* tabbar-message@2x.png */; };
+		8BEB73A3188AD4B20084B890 /* tabbar-discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BEB739E188AD4B20084B890 /* tabbar-discover@2x.png */; };
 		8BEF90E318818B3000676D3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BEF90E118818B3000676D3D /* Localizable.strings */; };
 		8BEF90EB18822C7F00676D3D /* LINGDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90EA18822C7F00676D3D /* LINGDiscoverViewController.m */; };
 		8BEF90EF18822CCA00676D3D /* LINGMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF90EE18822CCA00676D3D /* LINGMessageViewController.m */; };
@@ -75,6 +80,11 @@
 		8BB796AD188102CD00BE0764 /* LINGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGLoginViewController.m; sourceTree = "<group>"; };
 		8BB796AF1881144300BE0764 /* LINGRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINGRegisterViewController.h; sourceTree = "<group>"; };
 		8BB796B01881144400BE0764 /* LINGRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINGRegisterViewController.m; sourceTree = "<group>"; };
+		8BEB739A188AD4B20084B890 /* tabbar-profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-profile@2x.png"; sourceTree = "<group>"; };
+		8BEB739B188AD4B20084B890 /* tabbar-nearby@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-nearby@2x.png"; sourceTree = "<group>"; };
+		8BEB739C188AD4B20084B890 /* tabbar-more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-more@2x.png"; sourceTree = "<group>"; };
+		8BEB739D188AD4B20084B890 /* tabbar-message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-message@2x.png"; sourceTree = "<group>"; };
+		8BEB739E188AD4B20084B890 /* tabbar-discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-discover@2x.png"; sourceTree = "<group>"; };
 		8BEF90E218818B3000676D3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8BEF90E418818B6D00676D3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8BEF90E518818B6D00676D3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -161,6 +171,7 @@
 		8BA449C31880710800D775C1 /* iphone */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB7399188AD2FB0084B890 /* Images */,
 				8BB796A21880EF7D00BE0764 /* Classes */,
 				8BA449CC1880710800D775C1 /* LINGAppDelegate.h */,
 				8BA449CD1880710800D775C1 /* LINGAppDelegate.m */,
@@ -229,6 +240,18 @@
 				8B7F26FD18884A28009FA88C /* LINGDiscoverCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8BEB7399188AD2FB0084B890 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB739A188AD4B20084B890 /* tabbar-profile@2x.png */,
+				8BEB739B188AD4B20084B890 /* tabbar-nearby@2x.png */,
+				8BEB739C188AD4B20084B890 /* tabbar-more@2x.png */,
+				8BEB739D188AD4B20084B890 /* tabbar-message@2x.png */,
+				8BEB739E188AD4B20084B890 /* tabbar-discover@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		8BEF90E818818D3900676D3D /* Login */ = {
@@ -385,10 +408,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BEB73A3188AD4B20084B890 /* tabbar-discover@2x.png in Resources */,
+				8BEB73A2188AD4B20084B890 /* tabbar-message@2x.png in Resources */,
 				8BA449C81880710800D775C1 /* InfoPlist.strings in Resources */,
 				8BEF90E318818B3000676D3D /* Localizable.strings in Resources */,
 				8BA449D31880710800D775C1 /* Images.xcassets in Resources */,
+				8BEB739F188AD4B20084B890 /* tabbar-profile@2x.png in Resources */,
 				8B6AB7BC1886E65300F51C62 /* Main.storyboard in Resources */,
+				8BEB73A0188AD4B20084B890 /* tabbar-nearby@2x.png in Resources */,
+				8BEB73A1188AD4B20084B890 /* tabbar-more@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

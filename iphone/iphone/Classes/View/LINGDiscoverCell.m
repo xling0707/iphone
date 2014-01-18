@@ -9,13 +9,38 @@
 #import "LINGDiscoverCell.h"
 
 @interface LINGDiscoverCell ()
+/*!
+ *  头像
+ */
 @property (strong, nonatomic) IBOutlet UIImageView *avatar;
+/*!
+ *  标题
+ */
 @property (strong, nonatomic) IBOutlet UILabel *title;
+/*!
+ *  是否是小鲜
+ */
 @property (strong, nonatomic) IBOutlet UIImageView *flag;
+/*!
+ *  内容
+ */
 @property (strong, nonatomic) IBOutlet UITextView *content;
+/*!
+ *  时间
+ */
 @property (strong, nonatomic) IBOutlet UILabel *datetime;
+/*!
+ *  喜欢数
+ */
 @property (strong, nonatomic) IBOutlet UIButton *like;
+/*!
+ *  评论数
+ */
 @property (strong, nonatomic) IBOutlet UIButton *comment;
+
+/*!
+ *  相关图片
+ */
 
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *images;
 
